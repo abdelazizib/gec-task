@@ -4,13 +4,14 @@ namespace App\Listeners;
 
 use App\Events\ApplicationSubmitted;
 use App\Mail\ApplicationSubmitted as ApplicationSubmittedMail;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;
 
-class SendApplicationEmail implements ShouldQueue
+class SendApplicationEmail
 {
     public function handle(ApplicationSubmitted $event): void
     {
+        Mail::to(config('mail.admin_address'))
+            ->send(new ApplicationSubmittedMail($event->application));
     }
 }
 

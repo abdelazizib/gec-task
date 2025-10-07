@@ -27,7 +27,7 @@ final readonly class ApplicationDto
             gender: $request->post('gender'),
             country: $request->post('country'),
             comments: $request->post('comments'),
-            files: $request->array('files'),
+            files: $request->file('files', []),
         );
     }
 }

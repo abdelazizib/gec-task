@@ -29,6 +29,11 @@ class Application extends Model implements HasMedia
     {
         return $this->belongsTo(User::class);
     }
+    // ---------------  \\
+    public function getFiles()
+    {
+        return $this->getMedia('files');
+    }
 }
 
 

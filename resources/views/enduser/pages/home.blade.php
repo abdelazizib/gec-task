@@ -10,7 +10,7 @@
                 </p>
                 <div class="hero-image float-animation ">
                     <img src="{{ asset('assets/home-boy.jpg') }}"
-                        alt="Children learning" class="rounded-3" />
+                        alt="Children learning" class="rounded-3 w-100" />
                 </div>
             </div>
         </div>

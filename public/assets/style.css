@@ -1,0 +1,225 @@
+:root {
+  /* Color system */
+  --color-primary: #6A2C91;
+  --color-primary-light: #9747FF;
+  --color-primary-dark: #4A1D72;
+  
+  --color-secondary: #1E88E5;
+  --color-secondary-light: #64B5F6;
+  --color-secondary-dark: #0D47A1;
+  
+  --color-accent: #FF9800;
+  --color-accent-light: #FFB74D;
+  --color-accent-dark: #EF6C00;
+  
+  --color-success: #4CAF50;
+  --color-warning: #FFC107;
+  --color-error: #F44336;
+  
+  --color-background: #FFFFFF;
+  --color-surface: #F5F5F5;
+  --color-text-primary: #212121;
+  --color-text-secondary: #757575;
+
+  /* Spacing system - based on 8px */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* Typography */
+  font-family: 'Tajawal', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegistics;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+.hero {
+  padding-top: 100px;
+  padding-bottom: var(--space-5);
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-3);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-4);
+}
+
+.hero-image {
+  max-width: 80%;
+  margin: var(--space-4) auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.app-submit {
+  padding: var(--space-5) 0;
+  text-align: center;
+}
+
+.application-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+
+.application-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-text-primary);
+  color: white;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  gap: var(--space-1);
+}
+
+.application-btn:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.application-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-4);
+  color: var(--color-primary);
+}
+
+
+.footer {
+  padding: var(--space-4) 0;
+  background-color: var(--color-text-primary);
+  color: white;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.footer-links a {
+  color: white;
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+  }
+  .application-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .application-btn {
+    width: 80%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+}
